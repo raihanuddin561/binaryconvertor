@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Arrays;
+
 /**
  *
  * @author DCL
@@ -31,10 +33,18 @@ public static StringProcess getInstance(String input){
     }
     
     public String binaryToString(){
-        int charCode = Integer.parseInt(input,2);
-        String str = new Character((char) charCode).toString();
-        System.out.println(str);
-        return str;
+         StringBuilder sb = new StringBuilder();
+      
+        String[] binary = input.split(" ", -1);
+        for (String binary1 : binary) {
+            int code = Integer.parseInt(binary1, 2);
+            String a = String.valueOf((char)code);
+            sb.append(a);
+        }
+        String finalString = sb.toString();
+        System.out.print(finalString); 
+        return finalString;
+
     }
     
 }

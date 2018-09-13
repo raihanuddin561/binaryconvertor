@@ -19,14 +19,17 @@ public class StringToBinaryConvert {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+
+//         TODO code application logic here
         String input = "I love java";
         int ascii[] = AsciiProcess.getInstance(input).toAscii();
         int binary[] = BinaryProcess.getInstance(ascii).toBinary();
         System.out.println("Input is: "+input);
         System.out.println("Ascii is: "+Arrays.toString(ascii));
         System.out.println("Binary is: "+Arrays.toString(binary));
-        
+
+   
     }
     
    
